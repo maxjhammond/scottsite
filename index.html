@@ -6,6 +6,7 @@
     <title>Scott Miller | Piano Tuner</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.png' />
     <link rel="stylesheet/less" href="styles.less">
     <link rel="stylesheet/less" href="animate.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
@@ -38,9 +39,14 @@
         <h4>Piano Tuner/Freelance Musician/Accompanist</h4>
       </div>
       <div class="overlay"></div>
+      <div class="scroller">
+        <i class="fa fa-chevron-down"></i>
+      </div>
     </div>
-    <div class="container big">
-      <h1>More content</h1>
+    <div class="container scrollTo section1 big">
+      <p class="divider">
+        Scott Miller is a Piano Tuner/Technician based in West Cumbria, servicing Cumbria and South Scotland. He has been tuning pianos for 14 years, providing an expert piano tuning, maintenance and report service. His clients include theatres, schools, festivals, professional musicians and private players. Scott can advise you on transporting, buying a piano and can check any piano you might be thinking of acquiring.
+      </p><img src="img/Scott 3.jpg">
     </div>
     <script>
       $('.menubtn').on('click', function(){
@@ -53,6 +59,25 @@
           if ( $(e.target).closest('.menubtn').length === 0 ) {
               $('.menu').removeClass('active');
           }
+      });
+
+      $('.fa-chevron-down').click(function() {
+          $('html, body').animate({
+              scrollTop: $('.scrollTo').offset().top
+          }, 800);
+      });
+
+      $(function() {
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > $('.scrollTo').offset().top - 150) {
+                  $('.fa.fa-bars').addClass('dark');
+                  $('.menubtn').addClass('scrolled');
+              }
+              if ($(this).scrollTop() < $('.scrollTo').offset().top -50) {
+                  $('.fa.fa-bars').removeClass('dark');
+                  $('.menubtn').removeClass('scrolled');
+              }
+          });
       });
     </script>
   </body>
