@@ -64,6 +64,7 @@ h4{
 
 p, span, a{
   font-size: @medium;
+  display: inline-block;
   &.divider{
     position: relative;
     &:after{
@@ -75,6 +76,10 @@ p, span, a{
       height: 50px;
       background: url("img/divider.jpg") center -30px no-repeat;
       background-size: 90%;
+      @media (max-width: 400px){
+        background: url("img/divider.jpg") center 0 no-repeat;
+        background-size: 90%;
+      }
     }
   }
 }
@@ -115,9 +120,10 @@ header{
   top: 0px;
   left: 0px;
   z-index: 99;
-  padding: 20px;
   transition: all ease 0.2s;
+  width: 100%;
   i{
+    padding: 20px;
     font-size: 50px;
     color: @white;
     cursor: pointer;
@@ -128,9 +134,8 @@ header{
   }
   &.scrolled{
     background-color: @white;
-    width: 100%;
     @media (min-width: 1200px) {
-      width: auto;
+      background-color: transparent;
     }
   }
 }
@@ -144,15 +149,18 @@ header{
   transition: left ease 0.3s;
   z-index: 99;
   background: @offBlack;
+  color: @white;
+  h3{
+    margin: 100px 20px 0;
+  }
   .menu-items{
-    margin: 100px 20px;
+    margin: 20px;
     border-top: 1px solid;
-    padding: 40px 0 0 0;
+    padding: 20px 0 0 0;
     li{
       margin: 0 0 10px;
       padding: 0 0 5px;
       a{
-        color: @white;
         font-size: @large;
         display: inline-block;
         position: relative;
@@ -180,6 +188,17 @@ header{
   &.active{
     left: 0;
   }
+  @media (max-width: 640px){
+    width: 85vw;
+    left: -100vw;
+    .menu-items {
+      li {
+        a {
+          font-size: @medium;
+        }
+      }
+    }
+  }
 }
 
 footer{
@@ -206,7 +225,6 @@ footer{
   margin: 0 auto;
   h2{
     border-bottom: 1px solid;
-    display: inline-block;
     padding-bottom: 10px;
   }
   @media (max-width: 1024px){
@@ -262,6 +280,19 @@ footer{
         bottom: -5px;
       }
     }
+    h4.mobile{
+      display: none;
+    }
+    @media (max-width: 640px){
+      right: 0;
+      top: 20vh;
+      h4{
+        display: none;
+      }
+      h4.mobile{
+        display: block;
+      }
+    }
   }
   .scroller{
     position: absolute;
@@ -286,20 +317,130 @@ footer{
 
 .section1{
   padding-top: 200px;
+  h2{
+    margin-bottom: 20px;
+  }
   p, img{
     display: inline-block;
     width: 50%;
-    vertical-align: top;
+    vertical-align: middle;
     box-sizing: border-box;
+    @media (max-width: 768px){
+      display: block;
+      width: 100%;
+    }
   }
   p{
     padding-right: 20px;
   }
+  @media (max-width: 640px){
+    padding-top: 20px;
+  }
 }
 
-//MOBILE STYLES
-@media (max-width: 640px) {
-  .menubtn{
-    position: absolute;
+footer{
+  padding: 20px;
+  background: @offBlack;
+  color: @white;
+  font-size: @small;
+  .footer-section{
+    display: inline-block;
+    width: 33.333%;
+    vertical-align: top;
+    @media (max-width: 768px){
+      display: block;
+      width: 100%;
+      text-align: left!important;
+      margin: 0 0 100px;
+    }
+    &.social{
+      text-align: center;
+      h4{
+        text-decoration: underline;
+      }
+      .social-links{
+        a{
+          background: @white;
+          border-radius: 100%;
+          border: 2px solid @white;
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          padding: 10px;
+          font-size: 25px;
+          text-align: center;
+          margin: 5px;
+          z-index: 2;
+          transition: all ease 0.2s;
+          i{
+            color: @offBlack;
+            vertical-align: top;
+            cursor: pointer;
+            transition: all ease 0.2s;
+            &.fa-soundcloud{
+              margin-left: -3px;
+            }
+          }
+          &:hover{
+            background: transparent;
+            i.fa-facebook{
+              color: #2E69AC;
+            }
+            i.fa-twitter{
+              color: #00A2EC;
+            }
+            i.fa-soundcloud{
+              color: #FF5624;
+            }
+            i.fa-envelope{
+              color: #E34D43;
+            }
+          }
+        }
+      }
+    }
+    &.credit{
+      text-align: right;
+      a{
+        font-size: @medium;
+        position: relative;
+        &::after{
+          position: absolute;
+          content: '';
+          width: 0px;
+          height: 1px;
+          background: @white;
+          display: inline-block;
+          transition: width 0.2s ease;
+          left: 0;
+          bottom: -1px;
+        }
+        img{
+          cursor: pointer;
+        }
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
+
+        &.max{
+          margin-left: 4px;
+        }
+      }
+      .logo{
+        background: url("img/logo/mh-logo.png") center center no-repeat;
+        width: 70px;
+        height: 50px;
+        background-size: 100%;
+        margin-top: 5px;
+        &::after{
+          display: none;
+        }
+        @media (max-width: 768px){
+          display: block;
+        }
+      }
+    }
   }
 }
