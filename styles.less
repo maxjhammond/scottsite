@@ -416,23 +416,29 @@ footer{
     a{
       font-size: @small;
       position: relative;
+      transition: all ease 0.8s;
+      z-index: 0;
+      display: inline-block;
       &::after{
         content: '';
         display: inline-block;
         position: absolute;
         top: 1px;
-        right: -25px;
+        right: 0;
         background: url("http://127.0.0.1:8887/img/logo/mh-logo.png") center center no-repeat;
         width: 22px;
         height: 15px;
         background-size: 100%;
+        z-index: -1;
+        transition: all cubic-bezier(.15,.86,.35,.98) 0.2s;
+        opacity: 0;
       }
       &::before{
         position: absolute;
         content: '';
         width: 0px;
         height: 1px;
-        background: @white;
+        background: @red;
         display: inline-block;
         transition: width 0.2s ease;
         left: 0;
@@ -447,8 +453,13 @@ footer{
       }
 
       &:hover{
+        color: @red;
         &::before {
           width: 122%;
+        }
+        &::after{
+          right: -25px;
+          opacity: 1;
         }
       }
     }
