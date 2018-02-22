@@ -15,9 +15,9 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
     <!--<script src="https://unpkg.com/masonry-layout@4.2.0/dist/masonry.pkgd.min.js"></script>-->
-    <!--<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>-->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   </head>
   <body>
   <aside class="menu">
@@ -36,9 +36,10 @@
   </div>
     <div class="hero">
       <div class="container heroInner">
-        <h1>Scott Miller</h1>
-        <h4>Piano Tuner/Freelance Musician/Accompanist</h4>
-        <h4 class="mobile">Piano Tuner<br>Freelance Musician<br>Accompanist</h4>
+        <h1 data-wow-delay="0.3s" class="wow fadeIn">Scott Miller</h1>
+        <h4 data-wow-delay="0.5s" class="wow fadeIn">Piano Tuner</h4>
+        <h4 data-wow-delay="0.7s" class="wow fadeIn">Freelance Musician</h4>
+        <h4 data-wow-delay="0.9s" class="wow fadeIn">Accompanist</h4>
       </div>
       <div class="overlay"></div>
       <div class="scroller">
@@ -49,11 +50,12 @@
       <h2>About Scott</h2>
       <p class="divider">
         Scott Miller is a Piano Tuner/Technician based in West Cumbria, servicing Cumbria and South Scotland. He has been tuning pianos for 14 years, providing an expert piano tuning, maintenance and report service. His clients include theatres, schools, festivals, professional musicians and private players. Scott can advise you on transporting, buying a piano and can check any piano you might be thinking of acquiring.
-      </p><img src="img/Scott 3.jpg">
+      </p><img class="wow fadeIn" data-wow-delay="0.3s" src="img/Scott 3.jpg">
     </div>
   <footer>
     <div class="container">
       <div class="footer-section links">
+        <h4>Useful Links</h4>
         <ul class="menu-items">
           <li><a href="#">Home</a></li>
           <li><a href="#">Rates</a></li>
@@ -74,46 +76,70 @@
           <a href="#">
             <i class="fa fa-soundcloud"></i>
           </a>
-          <a href="#">
-            <i class="fa fa-envelope"></i>
-          </a>
         </div>
-      </div><div class="footer-section credit">
-        <p>Designed and built by</p><a class="max" href="https://twitter.com/maxhweb">Max Hammond</a>
-        <a class="logo" href="https://twitter.com/maxhweb"></a>
-      </div>
+      </div><div class="footer-section contact">
+        <h4>Contact</h4>
+        <ul class="menu-items">
+          <li>
+            <a href="#">
+              scotty@email.com <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              07123 456789 (Mobile) <i class="fa fa-phone"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              0193 123 4567 (Home)  <i class="fa fa-phone"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+    </div>
+    <div class="credit">
+      <span>Designed and built by
+        <a class="max" href="https://twitter.com/maxhweb">Max Hammond</a>
+      </span>
     </div>
   </footer>
     <script>
-      $('.menubtn i').on('click', function(){
+      $(document).imagesLoaded( function(){
 
-          $('.menu').toggleClass('active');
+        new WOW().init();
 
-      });
+        $('.menubtn i').on('click', function(){
 
-      $(document).click(function(e) {
-          if ( $(e.target).closest('.menubtn').length === 0 ) {
-              $('.menu').removeClass('active');
-          }
-      });
+            $('.menu').toggleClass('active');
 
-      $('.fa-chevron-down').click(function() {
-          $('html, body').animate({
-              scrollTop: $('.scrollTo').offset().top
-          }, 800);
-      });
+        });
 
-      $(function() {
-          $(window).scroll(function () {
-              if ($(this).scrollTop() > $('.scrollTo').offset().top - 150) {
-                  $('.fa.fa-bars').addClass('dark');
-                  $('.menubtn').addClass('scrolled');
-              }
-              if ($(this).scrollTop() < $('.scrollTo').offset().top -50) {
-                  $('.fa.fa-bars').removeClass('dark');
-                  $('.menubtn').removeClass('scrolled');
-              }
-          });
+        $(document).click(function(e) {
+            if ( $(e.target).closest('.menubtn').length === 0 ) {
+                $('.menu').removeClass('active');
+            }
+        });
+
+        $('.fa-chevron-down').click(function() {
+            $('html, body').animate({
+                scrollTop: $('.scrollTo').offset().top
+            }, 800);
+        });
+
+        $(function() {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > $('.scrollTo').offset().top - 150) {
+                    $('.fa.fa-bars').addClass('dark');
+                    $('.menubtn').addClass('scrolled');
+                }
+                if ($(this).scrollTop() < $('.scrollTo').offset().top -50) {
+                    $('.fa.fa-bars').removeClass('dark');
+                    $('.menubtn').removeClass('scrolled');
+                }
+            });
+        });
+
       });
     </script>
   </body>

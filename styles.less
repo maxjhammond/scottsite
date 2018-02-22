@@ -14,10 +14,6 @@
   }
 }
 
-html{
-  min-height: 100vh;
-}
-
 h1, p{
   margin: 0;
 }
@@ -129,7 +125,7 @@ header{
     cursor: pointer;
     transition: all ease 0.2s;
     &.dark{
-      color: @offBlack;
+      color: @darkgrey;
     }
   }
   &.scrolled{
@@ -148,7 +144,7 @@ header{
   top: 0;
   transition: left ease 0.3s;
   z-index: 99;
-  background: @offBlack;
+  background: @darkgrey;
   color: @white;
   h3{
     margin: 100px 20px 0;
@@ -265,6 +261,9 @@ footer{
     text-align: right;
     top: 40vh;
     right: 25vw;
+    h1, h4 {
+      font-weight: 500 !important;
+    }
     h1{
       display: inline-block;
       position: relative;
@@ -280,18 +279,12 @@ footer{
         bottom: -5px;
       }
     }
-    h4.mobile{
-      display: none;
+    h4{
+      margin: 0;
     }
     @media (max-width: 640px){
       right: 0;
       top: 20vh;
-      h4{
-        display: none;
-      }
-      h4.mobile{
-        display: block;
-      }
     }
   }
   .scroller{
@@ -340,13 +333,16 @@ footer{
 
 footer{
   padding: 20px;
-  background: @offBlack;
+  background: @darkgrey;
   color: @white;
   font-size: @small;
   .footer-section{
     display: inline-block;
     width: 33.333%;
     vertical-align: top;
+    h4{
+      text-decoration: underline;
+    }
     @media (max-width: 768px){
       display: block;
       width: 100%;
@@ -355,9 +351,6 @@ footer{
     }
     &.social{
       text-align: center;
-      h4{
-        text-decoration: underline;
-      }
       .social-links{
         a{
           background: @white;
@@ -373,7 +366,7 @@ footer{
           z-index: 2;
           transition: all ease 0.2s;
           i{
-            color: @offBlack;
+            color: @darkgrey;
             vertical-align: top;
             cursor: pointer;
             transition: all ease 0.2s;
@@ -399,48 +392,69 @@ footer{
         }
       }
     }
-    &.credit{
+    &.contact{
       text-align: right;
-      a{
-        font-size: @medium;
-        position: relative;
-        &::after{
-          position: absolute;
-          content: '';
-          width: 0px;
-          height: 1px;
-          background: @white;
-          display: inline-block;
-          transition: width 0.2s ease;
-          left: 0;
-          bottom: -1px;
-        }
-        img{
-          cursor: pointer;
-        }
-        &:hover{
-          &::after{
-            width: 100%;
+      .menu-items{
+        li{
+          a{
+            i{
+              font-size: 20px;
+            }
           }
-        }
-
-        &.max{
-          margin-left: 4px;
-        }
-      }
-      .logo{
-        background: url("img/logo/mh-logo.png") center center no-repeat;
-        width: 70px;
-        height: 50px;
-        background-size: 100%;
-        margin-top: 5px;
-        &::after{
-          display: none;
-        }
-        @media (max-width: 768px){
-          display: block;
         }
       }
     }
   }
+  .credit{
+    text-align: center;
+    background: @offBlack;
+    margin: 20px -20px -20px -20px;
+    padding: 10px;
+    span{
+
+    }
+    a{
+      font-size: @small;
+      position: relative;
+      &::after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        right: -25px;
+        background: url("http://127.0.0.1:8887/img/logo/mh-logo.png") center center no-repeat;
+        width: 22px;
+        height: 15px;
+        background-size: 100%;
+      }
+      &::before{
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 1px;
+        background: @white;
+        display: inline-block;
+        transition: width 0.2s ease;
+        left: 0;
+        bottom: -2px;
+      }
+      img{
+        cursor: pointer;
+      }
+
+      &.max{
+        font-size: 1em;
+      }
+
+      &:hover{
+        &::before {
+          width: 122%;
+        }
+      }
+    }
+  }
+}
+
+.wow {
+  visibility: hidden;
 }
