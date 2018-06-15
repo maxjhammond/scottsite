@@ -24,6 +24,7 @@ body{
   font-family: "Josefin", sans-serif;
   overflow-x: hidden;
   color: @offBlack;
+  line-height: 1.2;
 }
 
 strong{
@@ -69,12 +70,19 @@ p, span, a{
       width: 100%;
       left: 0;
       bottom: -10px;
-      height: 50px;
-      background: url("img/divider.jpg") center -30px no-repeat;
+      height: 70px;
+      background: url("img/divider.jpg") center -50px no-repeat;
       background-size: 90%;
       @media (max-width: 400px){
         background: url("img/divider.jpg") center 0 no-repeat;
         background-size: 90%;
+      }
+    }
+    &.half{
+      @media (min-width: 640px){
+        &:after{
+          background-position: center -25px;
+        }
       }
     }
   }
@@ -113,7 +121,7 @@ a{
   &:visited{
     color: unset;
   }
-}
+}line-
 
 //MAIN STYLES
 
@@ -160,6 +168,7 @@ header{
   transition: left ease 0.3s;
   z-index: 99;
   background: @darkgrey;
+  overflow: auto;
   color: @white;
   h3{
     margin: 100px 20px 0;
