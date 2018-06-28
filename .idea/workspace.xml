@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/index.html" line="175" />
+    <bookmark url="file://$PROJECT_DIR$/index.html" line="178" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce73320f-fd84-4af3-bf88-0d5202e8137a" name="Default" comment="">
@@ -29,8 +29,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
-                  <caret line="155" column="63" lean-forward="false" selection-start-line="155" selection-start-column="63" selection-end-line="155" selection-end-column="63" />
+                <state relative-caret-position="255">
+                  <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -45,8 +45,8 @@
           <file leaf-file-name="styles.less" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/styles.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="477" column="26" lean-forward="false" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+                <state relative-caret-position="255">
+                  <caret line="483" column="22" lean-forward="false" selection-start-line="483" selection-start-column="19" selection-end-line="483" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -68,9 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>offBlack</find>
-      <find>evt</find>
-      <find>scrolled</find>
       <find>contain</find>
       <find>container</find>
       <find>vh</find>
@@ -96,8 +93,11 @@
       <find>class=&quot;container&quot;</find>
       <find>class=&quot;container</find>
       <find>contact</find>
-      <find>fa</find>
       <find>.fa.</find>
+      <find>.fa</find>
+      <find>fa</find>
+      <find>menub</find>
+      <find>env</find>
     </findStrings>
     <replaceStrings>
       <replace>darkgrey</replace>
@@ -108,6 +108,7 @@
       <replace>fab</replace>
       <replace>.fas</replace>
       <replace>.fas.</replace>
+      <replace>.fab</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -117,8 +118,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/default.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles.less" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -152,7 +153,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,6 +175,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,22 +218,22 @@
       <workItem from="1528390321098" duration="108000" />
       <workItem from="1528396372003" duration="727000" />
       <workItem from="1529076153690" duration="6524000" />
-      <workItem from="1529944153386" duration="1592000" />
+      <workItem from="1529944153386" duration="1699000" />
+      <workItem from="1530202639181" duration="525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47234000" />
+    <option name="totallyTimeSpent" value="47866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110042736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11111111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17184265" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -243,6 +244,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -258,6 +260,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="155" column="63" lean-forward="false" selection-start-line="155" selection-start-column="63" selection-end-line="155" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/default.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2023">
@@ -568,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="155" column="63" lean-forward="false" selection-start-line="155" selection-start-column="63" selection-end-line="155" selection-end-column="63" />
+        <state relative-caret-position="255">
+          <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -578,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="477" column="26" lean-forward="false" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="483" column="22" lean-forward="false" selection-start-line="483" selection-start-column="19" selection-end-line="483" selection-end-column="22" />
           <folding />
         </state>
       </provider>
