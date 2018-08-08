@@ -71,17 +71,13 @@ p, span, a{
       left: 0;
       bottom: -10px;
       height: 70px;
-      background: url("img/divider.jpg") center -50px no-repeat;
-      background-size: 90%;
-      @media (max-width: 400px){
-        background: url("img/divider.jpg") center 0 no-repeat;
-        background-size: 90%;
-      }
+      background: url("img/divider.jpg") center center no-repeat;
+      background-size: contain;
     }
     &.half{
       @media (min-width: 640px){
         &:after{
-          background-position: center -25px;
+          background-position: center 10px;
         }
       }
     }
