@@ -149,9 +149,6 @@ header{
   }
   &.scrolled{
     background-color: rgba(63,63,63, 0.7);
-    @media (min-width: 1200px) {
-      background-color: transparent;
-    }
   }
 }
 
@@ -361,7 +358,7 @@ footer{
     width: 100%;
     z-index: 3;
     text-align: center;
-    i{
+    svg{
       font-size: 50px;
       color: @white;
       padding: 10px;
@@ -517,7 +514,7 @@ footer{
         position: absolute;
         top: 1px;
         right: 0;
-        background: url("http://127.0.0.1:8887/img/logo/mh-logo.png") center center no-repeat;
+        background: url("/img/mh-logo.png") center center no-repeat;
         width: 22px;
         height: 15px;
         background-size: 100%;
@@ -547,7 +544,7 @@ footer{
       &:hover{
         color: @red;
         &::before {
-          width: 122%;
+          width: 140%;
         }
         &::after{
           right: -25px;
