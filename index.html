@@ -46,7 +46,12 @@
     </ul>
   </aside>
   <div class="menubtn">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars menu-toggle"></i>
+  </div>
+  <div class="notice hidden">    
+    <i class="fas fa-times-circle notice-toggle close"></i>
+    <i class="fas fa-exclamation-circle notice-toggle open"></i>
+    <p>It's Lockdown II, the sequel, but, to paraphrase Elton John; I'm still tuning. All Covid-19 protocols observed! Text or tinkle <a tel='07931 574831' title ='Call Scott'>07931 574831</a> or email <a mailto='scotty@mail.org' title='Email Scott'>scotty@mail.org</a> for an appointment.</p>
   </div>
   <img style="display:none;" itemprop="image" src="img/Scott%201.jpg">
     <div class="hero">
@@ -176,36 +181,39 @@
 
         new WOW().init();
 
-        $('.menubtn').on('click', function(e) {
+        $('.menu-toggle').on('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
 
             $('.menu').toggleClass('active');
-            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                $('.fa.fa-bars').toggleClass('dark');
-            }
+            if (window.innerWidth < 640) {
+              $('.fa.fa-bars').toggleClass('dark');
 
+              if(!$('.notice').hasClass('hidden')){
+                $('.notice').toggleClass('hidden');
+              }
+            }
         });
 
-          $('.menu-items a').on('click', function(e) {
-              $('.menu').removeClass('active');
-              if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                  $('.fa.fa-bars').addClass('dark');
-              }
-          });
+        $('.menu-items a').on('click', function(e) {
+            $('.menu').removeClass('active');
+            if (window.innerWidth < 640) {
+                $('.fa.fa-bars').addClass('dark');
+            }
+        });
 
+        $('.notice-toggle').on('click', function(){
+          $('.notice').toggleClass('hidden');
+        });
 
-          $(document).on('click', function closeMenu (e){
-            if($('.menu').has(e.target).length === 0){
-                $('.menu').removeClass('active');
-                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    $('.fa.fa-bars').addClass('dark');
-                }
-              } else {
-                  $(document).on('click', closeMenu);
-              }
-          });
-
+        $(document).on('click', function closeMenu (e){
+          if($('.menu').has(e.target).length === 0){
+            $('.menu').removeClass('active');
+            if (window.innerWidth < 640) {
+                $('.fa.fa-bars').addClass('dark');
+            }
+          }
+        });
 
         $('.fa-chevron-down').on('click', function() {
           $('html, body').animate({
@@ -214,18 +222,18 @@
         });
 
         $(function() {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > $('.scrollTo').offset().top - 150) {
-                    $('.menubtn').addClass('scrolled');
-                    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                      $('.fa.fa-bars').addClass('dark');
-                    }
-                }
-                if ($(this).scrollTop() < $('.scrollTo').offset().top -50) {
-                    $('.menubtn').removeClass('scrolled');
-                    $('.fa.fa-bars').removeClass('dark');
-                }
-            });
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > $('.scrollTo').offset().top - 150) {
+                  $('.menubtn').addClass('scrolled');
+                  if (window.innerWidth < 640) {
+                    $('.fa.fa-bars').addClass('dark');
+                  }
+              }
+              if ($(this).scrollTop() < $('.scrollTo').offset().top -50) {
+                  $('.menubtn').removeClass('scrolled');
+                  $('.fa.fa-bars').removeClass('dark');
+              }
+          });
         });
 
       });

@@ -156,6 +156,75 @@ header{
   }
 }
 
+.notice{
+  position: fixed;
+  z-index: 100;
+  cursor: default;
+  top: 12px;
+  right: 20px;
+  padding: 10px 20px;
+  background: @desat-blue;
+  color: @white;
+  width: calc(~'100vw - 144px');
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all ease 0.3s;
+  max-height: 1000px;
+
+  .notice-toggle{
+    color: @short;
+    font-size: 45px;
+    cursor: pointer;
+  }
+
+  a{
+    color: @short;
+  }
+
+  p{
+    font-weight: @bold;
+    margin: 0 0 0 20px;
+    opacity: 1;
+    transition: all ease 0.3s;
+  }
+
+  .close{
+    display: none;
+  }
+
+  .open{
+    display: inline-block;
+  }
+
+  @media(max-width: 640px){
+    .close{
+      display: inline-block;
+    }
+  
+    .open{
+      display: none;
+    }
+     &.hidden{
+      .close{
+        display: none;
+      }
+
+      .open{
+        display: inline-block;
+      }
+
+      max-height: 45px;
+      overflow-y: hidden;
+      right: -51vw;
+      p{
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .menu{
   position: fixed;
   width: 400px;
