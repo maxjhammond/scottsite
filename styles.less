@@ -165,7 +165,7 @@ header{
   padding: 10px 20px;
   background: @desat-blue;
   color: @white;
-  width: calc(~'100vw - 144px');
+  max-width: calc(~'100vw - 184px');
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -207,6 +207,7 @@ header{
       display: none;
     }
      &.hidden{
+      transition: all ease 0.3s;
       .close{
         display: none;
       }
@@ -217,7 +218,7 @@ header{
 
       max-height: 45px;
       overflow-y: hidden;
-      right: -51vw;
+      right: -40vw;
       p{
         opacity: 0;
       }
@@ -615,10 +616,10 @@ footer{
         position: absolute;
         top: 1px;
         right: 0;
-        background: url("/img/mh-logo.png") center center no-repeat;
-        width: 22px;
+        background: url("/img/mx_regular_r.svg") center center no-repeat;
+        width: 35px;
         height: 15px;
-        background-size: 100%;
+        background-size: contain;
         z-index: -1;
         transition: all cubic-bezier(.15,.86,.35,.98) 0.2s;
         opacity: 0;
@@ -628,7 +629,7 @@ footer{
         content: '';
         width: 0px;
         height: 1px;
-        background: @red;
+        background: @mxgreen;
         display: inline-block;
         transition: width 0.2s ease;
         left: 0;
@@ -643,12 +644,12 @@ footer{
       }
 
       &:hover{
-        color: @red;
+        color: @mxgreen;
         &::before {
-          width: 140%;
+          width: 160%;
         }
         &::after{
-          right: -25px;
+          right: -40px;
           opacity: 1;
         }
       }
